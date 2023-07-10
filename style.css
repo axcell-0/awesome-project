@@ -1,111 +1,111 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Inter', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 100vh;
-    font-size: 2rem;
-  }
-  
-  .text-box {
-    position: relative;
-    margin-bottom: 20px;
-  }
-  
-  .text-box input {
-    padding: 8px;
-    font-size: 16px;
-    border: none;
-    border-bottom: 1px solid #aaa;
-    outline: none;
-    background-color: transparent;
-  }
-  
-  .text-box label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 8px;
-    font-size: 16px;
-    color: #555;
-    pointer-events: none;
-    transition: 0.2s ease-out;
-  }
-  
-  .text-box input:focus ~ label,
-  .text-box input:valid ~ label {
-    top: -20px;
-    left: 0;
-    color: #777;
-    font-size: 14px;
-  }
-  
-  h1 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  #books {
-    margin-top: 20px;
-    text-align: center;
-    border: 2px solid #ff6347;
-  }
-  
-  #books .text-box {
-    margin-bottom: 10px;
-  }
-  
-  #bookContainer {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .book {
-    padding: 10px;
-    border: 1px solid #ccc;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 45px;
-  }
-  
-  .book-title {
-    flex: 1;
-    font-weight: bold;
-  }
-  
-  .book-author {
-    color: #555;
-  }
-  
-  .remove-button {
-    background-color: #ff6347;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  .remove-button:hover {
-    background-color: #cc4338;
-  }
-  
-  .add-button {
-    display: inline-block;
-    padding: 10px 20px;
-    margin-top: 20px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 2rem;
+}
+
+.text-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.text-box input {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  outline: none;
+  background-color: transparent;
+}
+
+.text-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px;
+  font-size: 16px;
+  color: #555;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+}
+
+.text-box input:focus ~ label,
+.text-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#books {
+  margin-top: 20px;
+  text-align: center;
+  border: 2px solid #ff6347;
+}
+
+#books .text-box {
+  margin-bottom: 10px;
+}
+
+#section-book {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book {
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 45px;
+}
+
+.book-title {
+  flex: 1;
+  font-weight: bold;
+}
+
+.book-author {
+  color: #555;
+}
+
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.remove-button:hover {
+  background-color: #cc4338;
+}
+
+.add-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
