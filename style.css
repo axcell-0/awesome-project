@@ -96,16 +96,18 @@
     margin-left: -450px;
   }
 
-  .content {
+  /* .content {
     display: none;
-  }
+  } */
 
   .section {
-    display: none;
+    display: flex;
+    /* display: none; */
     justify-content: center;
     align-items: center;
     margin-left: 500px;
     margin-top: 50px;
+    flex-direction: column;
   }
 
   .section p {
@@ -136,6 +138,7 @@
     color: #fff;
     border: none;
     cursor: pointer;
+    margin-left: 550px;
   }
 
   .nav-header {
