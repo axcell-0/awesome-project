@@ -163,6 +163,8 @@ You can deploy this project using:
 ## Author <a name="author"></a>
 
 ## 👤 THIERRY NOUMBUH (AXCELL EVANS)
+## 👤 YOUNG GAIUS
+## 👤 ZUWAIRA SADIQ (ZUWAIRANAJMA)
 
 - GitHub: [@githubhandle](https://github.com/axcell-0)
 - Twitter: [@twitterhandle](https://twitter.com/noumbuh)
