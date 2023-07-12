@@ -98,3 +98,41 @@ class Library {
 
 const library = new Library();
 library.addEventListener('click');
+
+initializeDateDisplay() {
+    const d = new Date();
+    const year = d.getFullYear();
+    let date = d.getDate();
+    const hours = d.getHours();
+    let napm;
+    const monthLists = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    if (date === 1 || date === 21 || date === 31) {
+      date += 'st';
+    } else if (date === 2 || date === 22) {
+      date = `${date}nd`;
+    } else {
+      date = `${date}th`;
+    }
+
+    if (hours < 12) {
+      napm = 'am';
+    } else {
+      napm = 'pm';
+    }
+
+    this.dateDisplay.innerHTML = `${monthLists[d.getMonth()]} ${date} ${year}, ${hours}:${d.getMinutes()}:${d.getSeconds()} ${napm}`;
+  }
