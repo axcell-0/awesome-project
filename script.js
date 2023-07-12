@@ -75,3 +75,4 @@ class Library {
 }
 
 const library = new Library();
+library.addEventListener('click');
