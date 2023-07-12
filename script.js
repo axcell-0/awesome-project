@@ -5,9 +5,15 @@ class Library {
     this.addBookForm = document.getElementById('addBookForm');
     this.titleInput = document.getElementById('titleInput');
     this.authorInput = document.getElementById('authorInput');
+    this.navLinks = document.getElementsByTagName('a');
+    this.sections = document.getElementsByTagName('section');
+    this.dateDisplay = document.querySelector('.currentDate');
+    this.list = document.querySelector('.list-div');
 
     this.addBookForm.addEventListener('submit', this.handleFormSubmit.bind(this));
     this.displayBooks();
+    this.initializeNavLinks();
+    this.initializeDateDisplay();
   }
 
   displayBooks() {
@@ -47,12 +53,6 @@ class Library {
     });
   }
 
-  removeBook(index) {
-    this.books.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(this.books));
-    this.displayBooks();
-  }
-
   addBook(title, author) {
     const book = {
       title,
@@ -60,6 +60,12 @@ class Library {
     };
 
     this.books.push(book);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    this.displayBooks();
+  }
+
+  removeBook(index) {
+    this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
@@ -72,8 +78,23 @@ class Library {
     this.titleInput.value = '';
     this.authorInput.value = '';
   }
+
+  initializeNavLinks() {
+    this.sections[0].style.display = 'none';
+
+    for (let i = 0; i < this.navLinks.length; i = +1) {
+      this.navLinks[i].addEventListener('click', () => {
+        for (let j = 0; j < this.sections.length; j = +1) {
+          if (i === j) {
+            this.sections[j].style.display = 'block';
+          } else {
+            this.sections[j].style.display = 'none';
+          }
+        }
+      });
+    }
+  }
 }
 
 const library = new Library();
-
 library.addEventListener('click');

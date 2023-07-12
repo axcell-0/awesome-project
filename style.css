@@ -99,12 +99,8 @@ h1 {
 }
 
 .section {
-  display: flex;
-<<<<<<< HEAD
-
-  /* display: none; */
-=======
->>>>>>> d27cb2da77f2dafde423affa4c7da03fe8bd9974
+  /* display: flex; */
+  display: none;
   justify-content: center;
   align-items: center;
   margin-left: 500px;
@@ -118,6 +114,10 @@ h1 {
 
 .section ul {
   margin-top: 30px;
+}
+
+.content {
+  display: none;
 }
 
 .remove-button {
