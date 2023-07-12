@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 .text-box {
@@ -64,10 +64,10 @@ h1 {
 }
 
 #books {
-  margin: 40px;
+  margin-top: 20px;
   text-align: center;
   border: 2px solid #ff6347;
-  background-color: #f2f2f2;
+  width: 100%;
 }
 
 .footer-section {
@@ -100,10 +100,14 @@ h1 {
 
 .section {
   display: flex;
+<<<<<<< HEAD
 
   /* display: none; */
+=======
+>>>>>>> d27cb2da77f2dafde423affa4c7da03fe8bd9974
   justify-content: center;
   align-items: center;
+  margin-left: 500px;
   margin-top: 50px;
   flex-direction: column;
 }
@@ -131,12 +135,13 @@ h1 {
 
 .add-button {
   display: inline-block;
-  padding: 20px 40px;
+  padding: 10px 20px;
   margin-top: 20px;
   background-color: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
+  margin-left: 550px;
 }
 
 .nav-header {
