@@ -82,9 +82,9 @@ class Library {
   initializeNavLinks() {
     this.sections[0].style.display = 'none';
 
-    for (let i = 0; i < this.navLinks.length; i = +1) {
+    for (let i = 0; i < this.navLinks.length; i += 1) {
       this.navLinks[i].addEventListener('click', () => {
-        for (let j = 0; j < this.sections.length; j = +1) {
+        for (let j = 0; j < this.sections.length; j += 1) {
           if (i === j) {
             this.sections[j].style.display = 'block';
           } else {
@@ -94,12 +94,8 @@ class Library {
       });
     }
   }
-}
 
-const library = new Library();
-library.addEventListener('click');
-
-initializeDateDisplay() {
+  initializeDateDisplay() {
     const d = new Date();
     const year = d.getFullYear();
     let date = d.getDate();
@@ -136,3 +132,6 @@ initializeDateDisplay() {
 
     this.dateDisplay.innerHTML = `${monthLists[d.getMonth()]} ${date} ${year}, ${hours}:${d.getMinutes()}:${d.getSeconds()} ${napm}`;
   }
+}
+const library = new Library();
+library.addEventListener('click');
