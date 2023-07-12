@@ -75,5 +75,9 @@ class Library {
 }
 
 const library = new Library();
+<<<<<<< HEAD
 
 library.addEventListener('click');
+=======
+library.addEventListener('click');
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8

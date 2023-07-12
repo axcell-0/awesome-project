@@ -5,7 +5,11 @@
 }
 
 body {
+<<<<<<< HEAD
   font-family: 'Inter', sans-serif;
+=======
+  font-family: "Inter", sans-serif;
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8
 }
 
 .text-box {
@@ -52,11 +56,23 @@ h1 {
   margin-top: 20px;
 }
 
+<<<<<<< HEAD
 #books {
   margin-top: 20px;
   text-align: center;
   border: 2px solid #ff6347;
   width: 100%;
+=======
+.book:nth-child(even) {
+  background-color: #fff;
+}
+
+#books {
+  margin: 40px;
+  text-align: center;
+  border: 2px solid #ff6347;
+  background-color: #f2f2f2;
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8
 }
 
 .footer-section {
@@ -100,6 +116,7 @@ h1 {
 
 .section {
   display: flex;
+<<<<<<< HEAD
 
   /* display: none; */
   justify-content: center;
@@ -126,19 +143,51 @@ h1 {
   cursor: pointer;
 }
 
+=======
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  flex-direction: column;
+}
+
+.section p {
+  margin-top: 30px;
+}
+
+.section ul {
+  margin-top: 30px;
+}
+.remove-button {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8
 .remove-button:hover {
   background-color: #cc4338;
 }
 
 .add-button {
   display: inline-block;
+<<<<<<< HEAD
   padding: 10px 20px;
+=======
+  padding: 20px 40px;
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8
   margin-top: 20px;
   background-color: #4caf50;
   color: #fff;
   border: none;
   cursor: pointer;
+<<<<<<< HEAD
   margin-left: 550px;
+=======
+>>>>>>> 749c898b95f5c2f4492831549c64b35f03ea79d8
 }
 
 .nav-header {
