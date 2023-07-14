@@ -169,7 +169,6 @@ You can deploy this project using:
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/thierry-noumbuh-a44173257/)
 
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->

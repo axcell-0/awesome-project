@@ -5,9 +5,15 @@ class Library {
     this.addBookForm = document.getElementById('addBookForm');
     this.titleInput = document.getElementById('titleInput');
     this.authorInput = document.getElementById('authorInput');
+    this.navLinks = document.getElementsByTagName('a');
+    this.sections = document.getElementsByTagName('section');
+    this.dateDisplay = document.querySelector('.currentDate');
+    this.list = document.querySelector('.list-div');
 
     this.addBookForm.addEventListener('submit', this.handleFormSubmit.bind(this));
     this.displayBooks();
+    this.initializeNavLinks();
+    this.initializeDateDisplay();
   }
 
   displayBooks() {
@@ -47,12 +53,6 @@ class Library {
     });
   }
 
-  removeBook(index) {
-    this.books.splice(index, 1);
-    localStorage.setItem('books', JSON.stringify(this.books));
-    this.displayBooks();
-  }
-
   addBook(title, author) {
     const book = {
       title,
@@ -60,6 +60,12 @@ class Library {
     };
 
     this.books.push(book);
+    localStorage.setItem('books', JSON.stringify(this.books));
+    this.displayBooks();
+  }
+
+  removeBook(index) {
+    this.books.splice(index, 1);
     localStorage.setItem('books', JSON.stringify(this.books));
     this.displayBooks();
   }
@@ -72,8 +78,60 @@ class Library {
     this.titleInput.value = '';
     this.authorInput.value = '';
   }
+
+  initializeNavLinks() {
+    this.sections[0].style.display = 'none';
+
+    for (let i = 0; i < this.navLinks.length; i += 1) {
+      this.navLinks[i].addEventListener('click', () => {
+        for (let j = 0; j < this.sections.length; j += 1) {
+          if (i === j) {
+            this.sections[j].style.display = 'block';
+          } else {
+            this.sections[j].style.display = 'none';
+          }
+        }
+      });
+    }
+  }
+
+  initializeDateDisplay() {
+    const d = new Date();
+    const year = d.getFullYear();
+    let date = d.getDate();
+    const hours = d.getHours();
+    let napm;
+    const monthLists = [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ];
+
+    if (date === 1 || date === 21 || date === 31) {
+      date += 'st';
+    } else if (date === 2 || date === 22) {
+      date = `${date}nd`;
+    } else {
+      date = `${date}th`;
+    }
+
+    if (hours < 12) {
+      napm = 'am';
+    } else {
+      napm = 'pm';
+    }
+
+    this.dateDisplay.innerHTML = `${monthLists[d.getMonth()]} ${date} ${year}, ${hours}:${d.getMinutes()}:${d.getSeconds()} ${napm}`;
+  }
 }
-
 const library = new Library();
-
 library.addEventListener('click');
