@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>THierry's Book</title>
+</head>
+<body>
+  <div><h1>All Books</h1></div>
+  <section id="books" class="content">
+    <div id="section-book" class="book-container"></div>
+  </section>
+
+  <section id="add-book" class="content">
+    <h1>Add Book</h1>
+    <!-- Add book form content -->
+    <form id="addBookForm">
+      <div class="text-box">
+        <input type="text" id="titleInput" required>
+        <label>Title</label>
+      </div>
+      <div class="text-box">
+        <input type="text" id="authorInput" required>
+        <label>Author</label>
+      </div>
+      <div>
+        <button type="submit" class="add-button">
+          Add
+        </button>
+      </div>
+    </form>
+  </section>
+      <script src="script.js"></script>
+</body>
+</html>
